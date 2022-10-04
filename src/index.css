@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-center {
+  @apply flex justify-center items-center
+}
+
+.bgContainer {
+  background-image: url(../src/assets/blob\ 1.png);
+  background-size: 280px;
+  background-repeat: no-repeat;
+  background-position: calc(100% + 150px) -120px;
+}
+
+.bgContainer2 {
+  background-image: url(../src/assets/blob\ 2.png);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: -135px calc(100% + 80px);
+}
+
+
+.initial {
+  @apply px-6 rounded-[10px] inline-block text-center min-w-[80px] border border-btnPrimary cursor-pointer hover:border-transparent hover:bg-[#D6DBF5]
+}
+
+.selected {
+  @apply px-6 rounded-[10px] inline-block text-center min-w-[80px] bg-[#D6DBF5] border border-transparent
+}
+
+.greyed-out {
+  @apply px-6 rounded-[10px] inline-block text-center min-w-[80px] border border-btnPrimary opacity-50 pointer-events-none
+}
+
+.correct {
+  @apply px-6 rounded-[10px] inline-block text-center min-w-[80px] bg-[#94D7A2] border border-transparent pointer-events-none
+}
+
+.wrong {
+  @apply px-6 rounded-[10px] inline-block text-center min-w-[80px] bg-[#F8BCBC] border border-transparent pointer-events-none
+}
