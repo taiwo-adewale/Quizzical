@@ -6,9 +6,8 @@ const QuestionGroup = (props) => {
 
   function handleSelection(option) {
     props.setSelectedAnswers(prevAnswers => prevAnswers.map(ans => {
-        return props.id === ans.id ? {...ans, answer: option} : ans
-      })
-    )
+      return props.id === ans.id ? {...ans, answer: option} : ans
+    }))
   }
 
   function checkAnswer(ans) {
@@ -30,7 +29,12 @@ const QuestionGroup = (props) => {
       <div className='flex flex-wrap gap-x-3 gap-y-2 mb-6'>
 
         {props.answers.map(ans => {
-          return <Option key={nanoid()} option={ans} handleSelection={() => handleSelection(ans)} isSelected={props.selectedAnswer === ans ? true : false} optionState={props.finalData ? checkAnswer(ans) : 'initial'}/>
+          return <Option
+            key={nanoid()}
+            option={ans}
+            handleSelection={() => handleSelection(ans)}
+            isSelected={props.selectedAnswer === ans ? true : false}
+            optionState={props.finalData ? checkAnswer(ans) : 'initial'}/>
         })}
 
       </div>

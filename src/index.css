@@ -2,19 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 .flex-center {
   @apply flex justify-center items-center
 }
 
-.bgContainer {
-  background-image: url(../src/assets/blob\ 1.png);
+.bgContainerInner {
   background-size: 280px;
   background-repeat: no-repeat;
   background-position: calc(100% + 150px) -120px;
 }
 
-.bgContainer2 {
-  background-image: url(../src/assets/blob\ 2.png);
+.bgContainerOuter {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: -135px calc(100% + 80px);
