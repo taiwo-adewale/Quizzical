@@ -1,24 +1,25 @@
-import React from 'react'
+import React from "react";
 
 const Option = (props) => {
-
   function checkOptionState() {
-    if(props.optionState === 'initial') {
-      if(props.isSelected) {
-        return 'selected'
+    if (props.optionState === "initial") {
+      if (props.isSelected) {
+        return "selected";
       } else {
-        return 'initial'
+        return "initial";
       }
     } else {
-      return props.optionState
-    } 
+      return props.optionState;
+    }
   }
-  
+
   return (
     <div onClick={props.handleSelection} className={checkOptionState()}>
-      <span className='text-[13px] text-primary font-medium leading-loose'>{props.option}</span>
+      <span className="text-[13px] text-primary font-medium leading-loose">
+        {props.option}
+      </span>
     </div>
-  )
-}
+  );
+};
 
-export default Option
+export default Option;
