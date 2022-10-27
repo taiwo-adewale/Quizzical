@@ -14,7 +14,7 @@ const Main = () => {
 
   useEffect(() => {
     fetch(
-      "https://the-trivia-api.com/api/questions?categories=science,music,sport_and_leisure,society_and_culture,general_knowledge,food_and_drink,film_and_tv&limit=10&region=NG&difficulty=easy"
+      "https://the-trivia-api.com/api/questions?categories=food_and_drink,general_knowledge,geography,science&limit=10&region=NG&difficulty=easy"
     )
       .then((res) => res.json())
       .then((data) => {
