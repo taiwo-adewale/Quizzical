@@ -81,7 +81,7 @@ const Main = () => {
       style={{ backgroundImage: `url(${blobTwo})` }}
     >
       <div className="w-fit max-w-[90%] px-4 py-10 mx-auto flex flex-col gap-y-6">
-        {questions &&
+        {questions ? (
           questions.map((question, index) => {
             return (
               <QuestionGroup
@@ -94,7 +94,10 @@ const Main = () => {
                 finalData={isCompleted ? correctAnswers[index] : null}
               />
             );
-          })}
+          })
+        ) : (
+          <p className="text-center">Loading questions...</p>
+        )}
 
         <div className="text-center mt-2">
           {isCompleted ? (
@@ -112,6 +115,7 @@ const Main = () => {
             </div>
           ) : (
             <button
+              disabled={!Boolean(questions)}
               onClick={handleCheck}
               className="bg-btnPrimary text-sm text-btnText rounded-2xl px-12 py-3"
             >
