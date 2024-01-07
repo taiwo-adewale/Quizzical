@@ -14,11 +14,15 @@ const Option = (props) => {
   }
 
   return (
-    <div onClick={props.handleSelection} className={checkOptionState()}>
+    <button
+      disabled={props.optionState !== "initial"}
+      onClick={props.handleSelection}
+      className={checkOptionState()}
+    >
       <span className="text-[13px] text-primary font-medium leading-loose">
         {props.option}
       </span>
-    </div>
+    </button>
   );
 };
 
